@@ -1,0 +1,353 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>movie web</title>
+  <link rel="stylesheet" href="assets/css/default.css?v=3.0">
+  <link rel="shortcut icon" type="image/png" href="favicon.ico?v=1.0">
+  <script type="text/javascript" src="assets/js/vendor.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="assets/js/default.js"></script>
+  <link href="https://fonts.font.im/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+<body class="im-body">
+  <div class="im-backgroundimage-container">
+    <!-- 桌面图标 -->
+    <div id="win">
+        <ul id="app">
+            <li onDblClick="openMyPc()">
+                <a href="#">
+                <img src="images/MyPc.ico"><br />
+                My Computer</a>
+            </li>
+            <li onDblClick="openPanel()">
+                <a href="#">
+                <img src="images/Folder.ico"><br />
+                My Folder</a>
+            </li>
+            <li onDblClick="openNetwork()">
+                <a href="#">
+                <img src="images/NetHood.ico"><br />
+                Network Neighborhood</a>
+            </li>
+            <li onDblClick="openWechat()">
+                <a href="#">
+                <img src="images/Application.ico"><br />
+                Wechat</a>
+            </li>
+            <li onDblClick="openTeams()">
+                <a href="#">
+                <img src="images/Application.ico"><br />
+                Microsoft Teams</a>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 我的电脑窗口 -->
+    <div class="main js-draggy my-pc" id="my-pc"> <!-- moving+js-draggy -->
+        <!-- 第一层 -->
+        <div class="top1">
+            My Computer
+            <div class="top-right">
+                <i class="close" onclick="closeMyPc()"></i>
+            </div>
+        </div>
+        <!-- 新加的第二层操作栏 -->
+        <div class="second-layer">
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Help</span>
+        </div>
+        <!-- 新加的第二层操作栏 结束-->
+        <!-- 内容部分 -->
+        <div class="box1">
+            <div class="chat-list1">
+                <div class="list-box1">
+                    <i class="icon disk-icon"></i>(C:)
+                    <i class="icon panel-icon"></i>Control Panel
+                    <i class="icon file-icon"></i>My Folder
+                    <i class="icon file-back-icon"></i>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- 第三层位置 -->
+        <div class="second-layer">
+            4 object(s)
+        </div>
+    </div>
+    <!-- 我的电脑内页 -->
+
+    <!-- folder窗口 -->
+    <div class="main js-draggy" id="panel"> <!-- moving+js-draggy -->
+        <div class="top2">
+            My Folder
+            <div class="top-right">
+                <i class="close" onclick="closePanel()"></i>
+            </div>
+        </div>
+        <!-- 新加的第二层操作栏 -->
+        <div class="second-layer">
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Help</span>
+        </div>
+        <!-- 新加的第二层操作栏 结束-->
+        <div class="box2">
+            <div class="chat-list2">
+                <div class="list-box2">
+                    <i class="icon file-icon"></i>My Folder
+                    <i class="icon file-back-icon"></i>
+            </div>
+        </div>
+    </div>
+    <!-- 第三层位置 -->
+    <div class="third-layer">
+        2 object(s)
+    </div>
+    </div>
+
+    <!-- floder内页 -->
+
+    <!-- 网络窗口 -->
+    <div class="main js-draggy" id="network"> <!-- moving+js-draggy -->
+        <div class="top3">
+            Network Neighborhood
+            <div class="top-right">
+                <i class="close" onclick="closeNetwork()"></i>
+            </div>
+        </div>
+        <!-- 新加的第二层操作栏 -->
+        <div class="second-layer">
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Help</span>
+        </div>
+        <!-- 新加的第二层操作栏 结束-->
+        <div class="box3">
+            <div class="chat-list3">
+                <div class="list-box3">
+                  <i class="icon MyPc-icon"></i>Gaz
+                  <i class="icon MyPc-icon"></i>Win95
+                  <i class="icon MyPc-icon"></i>Freenas
+                  <i class="icon MyPc-icon"></i>Bignathan
+                  <i class="icon MyPc-icon"></i>Testcomputer
+                  <i class="icon MyPc-icon"></i>Entire Network
+
+                </div>
+            </div>
+        </div>
+        <!-- 第三层位置 -->
+        <div class="third-layer">
+            6 object(s)
+        </div>
+    </div>
+    <!-- 网络内页 -->
+
+    <!-- teams窗口 -->
+    <div class="main js-draggy" id="teams"> <!-- moving+js-draggy -->
+        <div class="top4">
+            <div class="top-right">
+                <i class="ic-close ic-same" onclick="closeTeams()"></i>
+            </div>
+        </div>
+    </div>
+    <div class="main js-draggy" id="teams1"> <!-- moving+js-draggy -->
+        <div class="top4">
+            <div class="top-right">
+                <i class="ic-close ic-same" onclick="closeTeams1()"></i>
+            </div>
+        </div>
+    </div>
+    <!-- 可复制多个  开始-->
+    <div class="main js-draggy" id="teams2"> <!-- moving+js-draggy -->
+        <div class="top4">
+            <div class="top-right">
+                <i class="ic-close ic-same" onclick="closeTeams2()"></i>
+            </div>
+        </div>
+    </div>
+    <!-- 可复制多个 结束 -->
+<!-- 可复制多个  开始-->
+<div class="main js-draggy" id="teams3"> <!-- moving+js-draggy -->
+    <div class="top4">
+        <div class="top-right">
+            <i class="ic-close ic-same" onclick="closeTeams3()"></i>
+        </div>
+    </div>
+</div>
+<!-- 可复制多个 结束 -->
+    <!-- 微信列表 -->
+    <div class="main js-draggy" id="wechat"> <!-- moving+js-draggy -->
+        <div class="top">
+            <div class="top-left">
+                <div class="header"></div>
+                <div class="search">
+                    <input type="text">
+                    <i class="icon-sear"></i>
+                </div>
+            </div>
+            <!-- <div class="top-type">
+                <a href="#" class="news icon-site"></a>
+                <a href="#" class="friend icon-site"></a>
+                <a href="#" class="file icon-site"></a>
+            </div> -->
+            <div class="top-right">
+                <!-- <i class="ic-menu ic-same"></i> -->
+                <!-- <i class="ic-shrink ic-same"></i> -->
+
+                <i class="ic-close ic-same" onclick="closeWechat()"></i>
+            </div>
+        </div>
+        <div class="box">
+            <div class="chat-list">
+                <div class="list-box">
+                    <img class="chat-head" src="images/宋温暖.jpeg" alt="">
+                    <div class="chat-rig">
+                        <p class="title">宋温暖</p>
+                        <p class="text">在？</p>
+                    </div>
+                </div>
+                <div class="list-box select"><img class="chat-head" src="images/妈妈.jpeg" alt="">
+                    <div class="chat-rig"><p class="title">妈妈</p>
+                        <p class="text">准备上课了！下课说</p></div>
+                </div>
+                <div class="list-box"><img class="chat-head" src="images/安安安.jpeg" alt="">
+                    <div class="chat-rig"><p class="title">安安安</p>
+                        <p class="text">4排来不来</p></div>
+                </div>
+                <div class="list-box">
+                    <img class="chat-head" src="images/腾讯视频.png" alt="">
+                    <div class="chat-rig">
+                        <p class="title">腾讯视频</p>
+                        <p class="text">惊心动魄！海军飞行学员成功...</p>
+                    </div>
+                </div>
+
+                <div class="list-box"><img class="chat-head" src="images/爸爸.jpeg" alt="">
+                    <div class="chat-rig"><p class="title">爸爸</p>
+                        <p class="text">[红包]</p></div>
+                </div>
+                <div class="list-box">
+                    <img class="chat-head" src="images/家人们.png" alt="">
+                    <div class="chat-rig">
+                        <p class="title">家人们</p>
+                        <p class="text">[5条]二姐:[表情]</p>
+                    </div>
+                </div>
+                <div class="list-box"><img class="chat-head" src="images/微信运动.png" alt="">
+                    <div class="chat-rig"><p class="title">微信运动</p>
+                        <p class="text">[应用消息]</p></div>
+                </div>
+    <!-- 聊天内容 -->
+            </div>
+            <div class="box-right">
+                <div class="recvfrom">
+                    <div class="nav-top">
+                        <p>妈妈</p>
+                    </div>
+                    <div class="news-top">
+                        <ul>
+                            <li class="other">
+                                <div class="avatar"><img src="images/妈妈.jpeg" alt=""></div>
+                                <div class="msg">
+                                    <p class="msg-name">妈妈</p>
+                                    <p class="msg-text">吃饭了吗 <emoji class="pizza"></emoji></p>
+                                    <time>13:18</time>
+                                </div>
+                            </li>
+                            <li class="self">
+                                <div class="avatar"><img src="images/我.jpg" alt=""></div>
+                                <div class="msg">
+                                    <p class="msg-name">我</p>
+                                    <p class="msg-text">吃啦<emoji class="pizza"></emoji></p>
+                                    <time>13:19</time>
+                                </div>
+                            </li>
+                            <li class="other">
+                                <div class="avatar"><img src="images/妈妈.jpeg" alt=""></div>
+                                <div class="msg">
+                                    <p class="msg-name">妈妈</p>
+                                    <p class="msg-text">吃的什么，自己做的吗 <emoji class="pizza"></emoji></p>
+                                    <time>13:21</time>
+                                </div>
+                            </li>
+                            <li class="self">
+                                <div class="avatar"><img src="images/我.jpg" alt=""></div>
+                                <div class="msg">
+                                    <p class="msg-name">我</p>
+                                    <p class="msg-text">嗯呐 <emoji class="pizza"></emoji></p>
+                                    <time>13:21</time>
+                                </div>
+                            </li>
+                            <li class="self">
+                                <div class="avatar"><img src="images/我.jpg" alt=""></div>
+                                <div class="msg">
+                                    <p class="msg-name">我</p>
+                                    <p class="msg-text">做了个炒牛肉 <emoji class="pizza"></emoji></p>
+                                    <time>13:21</time>
+                                </div>
+                            </li>
+                            <li class="self">
+                                <div class="avatar"><img src="images/我.jpg" alt=""></div>
+                                <div class="msg">
+                                    <p class="msg-name">我</p>
+                                    <p class="msg-text">[图片] <emoji class="pizza"></emoji></p>
+                                    <time>13:23</time>
+                                </div>
+                            </li>
+                            <li class="other">
+                                <div class="avatar"><img src="images/妈妈.jpeg" alt=""></div>
+                                <div class="msg">
+                                    <p class="msg-name">妈妈</p>
+                                    <p class="msg-text">看着颜色不错 <emoji class="pizza"></emoji></p>
+                                    <time>13:25</time>
+                                </div>
+                            </li>
+                            <li class="self">
+                                <div class="avatar"><img src="images/我.jpg" alt=""></div>
+                                <div class="msg">
+                                    <p class="msg-name">我</p>
+                                    <p class="msg-text">好吃ლ(´ڡ`ლ) <emoji class="pizza"></emoji></p>
+                                    <time>13:26</time>
+                                </div>
+                            </li>
+                            <li class="self">
+                                <div class="avatar"><img src="images/我.jpg" alt=""></div>
+                                <div class="msg">
+                                    <p class="msg-name">我</p>
+                                    <p class="msg-text">准备上课了！下课说 <emoji class="pizza"></emoji></p>
+                                    <time>13:28</time>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sendto">
+                    <div class="but-nav">
+                        <ul>
+                            <li class="font"></li>
+                            <li class="face"></li>
+                            <li class="cut"></li>
+                            <li class="page"></li>
+                            <!-- <li class="old"></li> -->
+                        </ul>
+                    </div>
+                    <div class="but-text">
+                        <textarea name="" id="" cols="110" rows="6"></textarea>
+                        <button type="button" name="button">发送</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
